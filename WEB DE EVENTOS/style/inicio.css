@@ -1,0 +1,225 @@
+/* style/inicio.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #111;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;  /* Asegura que el header esté encima del banner */
+
+}
+
+header .logo h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  transition: font-size 0.3s ease; /* Transición suave para cambio de tamaño */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: #007BFF;
+}
+
+header nav ul li a.active {
+  color: #007BFF;
+}
+
+/* Estilos para el botón de hamburguesa, visible solo en pantallas pequeñas */
+.hamburger-menu {
+  display: none; /* El botón solo será visible en dispositivos pequeños */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Mostrar el botón en dispositivos pequeños */
+  .hamburger-menu {
+    display: block;
+  }
+
+  header .logo h1 {
+    font-size: 1.5rem; /* Reducir el tamaño del logo en pantallas pequeñas */
+  }
+
+  /* Asegurarse de que el logo y el botón estén alineados */
+  header {
+    justify-content: space-between; /* Mantener el espacio entre el logo y el botón */
+  }
+
+  /* El menú debe estar oculto por defecto en dispositivos pequeños */
+  #nav-menu {
+    display: none;
+    width: 100%;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem;
+  }
+
+  #nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  #nav-menu ul li a {
+    font-size: 1.5rem;
+  }
+
+  #nav-menu ul li a.active {
+    color: #007BFF;
+  }
+
+  #nav-menu.active {
+    display: block; /* Mostrar el menú cuando el botón se haga clic */
+  }
+}
+
+main {
+  display: flex;
+  margin-top: 3rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.content {
+  display: none;
+  flex: 1;
+}
+
+.content.active {
+  display: flex;
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem; /* Separación del banner del formulario */
+  z-index: 1; 
+
+}
+
+.slider-container {
+  width: 100%;
+  height: 400px; /* Mantengo la altura para las imágenes rectangulares */
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-image {
+  width: 110%; /* Aumento el ancho para que las imágenes sean más anchas */
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-position: center; /* Centra la imagen dentro del contenedor */
+  left: 0; /* Asegura que la imagen esté completamente alineada a la izquierda */
+}
+
+h2 {
+  color: #f4a261;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.formulario-registro {
+  width: 50%;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form select, form input {
+  padding: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .banner, .formulario-registro {
+    width: 90%; /* Ajustamos el ancho en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  form select {
+    width: 100%;
+  }
+}

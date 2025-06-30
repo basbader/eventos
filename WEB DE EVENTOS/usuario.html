@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="style/usuario.css">
+  <script defer src="js/usuario.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header reutilizado del index -->
+  <header>
+    <div class="logo">
+      <h1>EventPlus</h1>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      &#9776; <!-- Icono de hamburguesa -->
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="tab" onclick="showTab('index')">Inicio</a></li>
+        <li><a href="eventos.html" class="tab" onclick="showTab('eventos')">Eventos</a></li>
+        <li><a href="login.html" class="tab" onclick="showTab('login')">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main de la página de Usuario -->
+  <main>
+    <section id="usuario" class="content active">
+      <h2>Gestión de Usuarios</h2>
+      
+      <!-- Tabla para gestionar los registros de los usuarios -->
+      <table id="usuario-table">
+        <thead>
+          <tr>
+            <th>Tipo de Evento</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Correo Electrónico</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Los registros se añadirán dinámicamente mediante JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventPlus</p>
+  </footer>
+</body>
+</html>

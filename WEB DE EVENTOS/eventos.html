@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="style/eventos.css">
+  <script defer src="js/eventos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header reutilizado del index -->
+  <header>
+    <div class="logo">
+      <h1>EventPlus</h1>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      &#9776; <!-- Icono de hamburguesa -->
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="tab" onclick="showTab('index')">Inicio</a></li>
+        <li><a href="eventos.html" class="tab active" onclick="showTab('eventos')">Eventos</a></li>
+        <li><a href="login.html" class="tab" onclick="showTab('login')">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main de la página de Eventos -->
+  <main>
+    <section id="eventos" class="content active">
+      <h2>Eventos Disponibles</h2>
+      <div class="event-container">
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis1.jpg" alt="Evento Música" class="event-image">
+            <p>Música en Vivo</p>
+            <p>Disfruta de una experiencia única con artistas locales e internacionales.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis2.jpg" alt="Evento Danza" class="event-image">
+            <p>Festival de Danza</p>
+            <p>Explora diferentes culturas a través de las danzas tradicionales.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis3.jpg" alt="Evento Libros" class="event-image">
+            <p>Feria del Libro</p>
+            <p>Un evento literario para todos los amantes de la lectura y la escritura.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis4.jpg" alt="Evento Negocios" class="event-image">
+            <p>Conferencia de Negocios</p>
+            <p>Descubre las últimas tendencias en el mundo de los negocios y el emprendimiento.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis5.jpg" alt="Evento Contaminación Global" class="event-image">
+            <p>Conciencia sobre Contaminación Global</p>
+            <p>Un evento educativo para fomentar el cuidado del medio ambiente.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis6.jpg" alt="Evento Innovación Tecnológica" class="event-image">
+            <p>Innovación Tecnológica</p>
+            <p>Una exposición de las últimas tecnologías que cambiarán el mundo.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis7.jpg" alt="Evento Deportes" class="event-image">
+            <p>Campeonato Deportivo</p>
+            <p>Participa o disfruta de una competencia llena de emoción.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis8.jpg" alt="Evento Arte" class="event-image">
+            <p>Exposición de Arte</p>
+            <p>Sumérgete en el mundo del arte contemporáneo y clásico.</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <a href="login.html">
+            <img src="imagenes/Eventos/evdis9.jpg" alt="Evento Conferencias Educativas" class="event-image">
+            <p>Conferencias Educativas</p>
+            <p>Mejora tus conocimientos con expertos en diversas áreas académicas.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventPlus</p>
+  </footer>
+</body>
+</html>

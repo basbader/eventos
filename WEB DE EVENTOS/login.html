@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="style/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header reutilizado del index -->
+  <header>
+    <div class="logo">
+      <h1>EventPlus</h1>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      &#9776; <!-- Icono de hamburguesa -->
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="tab" onclick="showTab('index')">Inicio</a></li>
+        <li><a href="eventos.html" class="tab" onclick="showTab('eventos')">Eventos</a></li>
+        <li><a href="login.html" class="tab active" onclick="showTab('login')">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main con el formulario de login -->
+  <main>
+    <section id="login" class="content active">
+      <h2>Iniciar Sesión</h2>
+      <form id="login-form">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+
+      <!-- Mensaje de éxito y error -->
+      <div id="success-message" style="color: green; display: none; background-color: #e7f9e7; padding: 10px; border-radius: 5px; margin-top: 10px;">
+        ¡Inicio de sesión exitoso!
+      </div>
+      <div id="error-message" style="color: red; display: none; background-color: #f9e7e7; padding: 10px; border-radius: 5px; margin-top: 10px;">
+        La contraseña no cumple con los requisitos o usuario incorrecto.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EventPlus</p>
+  </footer>
+
+  <!-- Enlace al archivo JavaScript externo -->
+  <script src="js/login.js"></script>
+</body>
+</html>
